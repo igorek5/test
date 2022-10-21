@@ -1,0 +1,38 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Тест" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const heroContent = {
+      title: "Заголовок блока",
+      desciption: "Текстовое описание блока",
+      contentItems: [
+        {
+          number: "1 элемент блока",
+          label: "Подзаголовок №1",
+          info: "Текстовое описание №1",
+        },
+        {
+          number: "2 элемент блока",
+          label: "Подзаголовок №2",
+          info: "Текстовое описание №2",
+        },
+        {
+          number: "3 элемент блока",
+          label: "Подзаголовок №3",
+          info: "Текстовое описание №3",
+        },
+      ]
+    }
+
+block main
+  main
+    +software()
+    +hero(heroContent)
+block modals

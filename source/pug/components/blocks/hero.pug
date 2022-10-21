@@ -1,0 +1,18 @@
+mixin hero(options = {})
+  .hero
+    .container
+      h2.hero__title!=options.title
+      p.hero__desciption!=options.desciption
+
+      ul.hero__list
+        each item in options.contentItems
+
+          li.hero__item
+            .hero__label-wrapper
+              span.hero__number!=item.number
+              h3.hero__label!=item.label
+            .hero__info-wrapper
+              p.hero__info!=item.info
+
+
+
